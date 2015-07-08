@@ -7,7 +7,7 @@
 
 		body {
 			font-family:'Lato', Helvetica, Arial, sans-serif;
-			font-weight:300;
+			font-weight:400;
 		}
 		footer{
 			background-color: $brown;
@@ -139,7 +139,9 @@
 		}
 		h4{
 			font-size:18px;
+			line-height: 22px;
 			font-weight:400;
+			text-transform: uppercase;
 		}
 		//default colors
 		a,h2,label,p, ul, h5{
@@ -165,7 +167,7 @@
 				line-height: 28px;
 				font-size: 16px;
 				width: 80%;
-				margin: 0 auto;
+				margin: 15px auto;
 				text-align: center;
 			}
 			.btn{
@@ -177,11 +179,6 @@
 					padding: 0 0 0 5px;
 				}
 			}
-			span.glyphicon-star-empty{
-				padding: 0 5px;
-				margin: 0;
-				font-size: 11px;
-			}
 			
 		}
 
@@ -190,6 +187,7 @@
 				float: none;
 				display: block;
 		}
+
 		.intro-photo{
 			background-color:#fff;
 			height:165px;
@@ -202,6 +200,7 @@
     		background-position: center center;
     		background-size:165px;
 		}
+
 		//default .btn style
 		.btn{
 			color: $light-blue;
@@ -427,9 +426,6 @@
     .row{
     	padding: 50px 0;
     }
-	body{
-		font-weight: 400;
-	}
 	div#work{
 		.work-example{
 			height: 145px
@@ -464,7 +460,6 @@
 		width: 60%;
 		margin: 0 auto;
 		display: block;
-		padding-bottom: 15px;
 	}
 	h2{
 		font-size: 38px;
@@ -492,6 +487,11 @@
 	header#intro{
 		span.glyphicon-star-empty{
 			display: none;
+		}
+	}
+	div#about{
+		p{
+			padding-top: 25px;
 		}
 	}
 }

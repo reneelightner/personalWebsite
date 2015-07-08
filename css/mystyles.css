@@ -1,6 +1,6 @@
 body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  font-weight: 300; }
+  font-weight: 400; }
 
 footer {
   background-color: #B26550;
@@ -113,7 +113,9 @@ h3 {
 
 h4 {
   font-size: 18px;
-  font-weight: 400; }
+  line-height: 22px;
+  font-weight: 400;
+  text-transform: uppercase; }
 
 a, h2, label, p, ul, h5 {
   color: #0075B2; }
@@ -132,7 +134,7 @@ header#intro p {
   line-height: 28px;
   font-size: 16px;
   width: 80%;
-  margin: 0 auto;
+  margin: 15px auto;
   text-align: center; }
 header#intro .btn {
   background-color: #FF9003; }
@@ -140,10 +142,6 @@ header#intro .btn {
     background-color: #B26550; }
   header#intro .btn span.glyphicon {
     padding: 0 0 0 5px; }
-header#intro span.glyphicon-star-empty {
-  padding: 0 5px;
-  margin: 0;
-  font-size: 11px; }
 
 .jump-work-link {
   margin: 0 auto;
@@ -342,9 +340,6 @@ img.my-photo {
   .row {
     padding: 50px 0; }
 
-  body {
-    font-weight: 400; }
-
   div#work .work-example {
     height: 145px; } }
 @media (max-width: 600px) {
@@ -363,8 +358,7 @@ img.my-photo {
     float: none;
     width: 60%;
     margin: 0 auto;
-    display: block;
-    padding-bottom: 15px; }
+    display: block; }
 
   h2 {
     font-size: 38px; }
@@ -385,7 +379,10 @@ img.my-photo {
     height: auto; }
 
   header#intro span.glyphicon-star-empty {
-    display: none; } }
+    display: none; }
+
+  div#about p {
+    padding-top: 25px; } }
 /* Small desktops / portrait tablets, 768px and up to 991px, sm on bootstrap 3 */
 /* Medium desktops / landscape tablets, 992px and up to 1199px, md on bootstrap 3 */
 @media (min-width: 992px) and (max-width: 1199px) {

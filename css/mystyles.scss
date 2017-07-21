@@ -9,34 +9,7 @@
 			font-family:'Lato', Helvetica, Arial, sans-serif;
 			font-weight:400;
 		}
-		footer{
-			background-color: $brown;
-			padding: 10px 0;
-			border-top: 3px solid $orange;
-			p,a{	
-				color: $light-blue;
-				text-align: center;
-			}
-			p.footer-name{
-				font-size: 18px;
-				text-transform: uppercase;
-				font-weight: 600;
-			}
-			a{
-				&:hover{
-					text-decoration: none;
-					color: $light-orange;
-				}
-			}
-			.btn{
-				margin: 0 auto;
-				width: 105px;
-				display: block;
-				&:hover{
-					background-color: $orange;
-				}
-			}
-		}
+
 		nav{
 			background-color: $dark-blue;
 			&.navbar{
@@ -48,27 +21,31 @@
 					}
 				}			
 				li{
-					a{
+					a.page-scroll{
 						color: $light-blue;
 						font-weight:600;
 						text-transform: uppercase;
+						background-color: $dark-blue;
 						&:hover{
 							color: $light-orange;
-							background-color: transparent;
+							background-color: $dark-blue;
 						}
 						&.active{
 							color: $light-orange;
+							background-color: $dark-blue;
 						}
 					}
 				}
 			}
 		}
+
 		@mixin socialMediaButton($horiz, $vert){
 			background-position: $horiz $vert;
 			&:hover{
 				background-position: $horiz -36px;
 			}
 		}
+
 		.social-links {
 			a{
 				display: block;
@@ -93,7 +70,11 @@
 			}			
 		}
 		.row{
-			padding: 120px 0 40px 0;
+			padding: 220px 0 220px 0;
+			margin-bottom: 20px;
+		}
+		header#intro{
+			padding: 120px 0 60px 0;
 			margin-bottom: 20px;
 		}
 		section:nth-child(even){
@@ -105,8 +86,7 @@
 		section:nth-child(5){
 			background-color: $light-orange;
 		}
-		
-		h2{
+		h2, h1{
 			font-size: 50px;
 			text-transform: uppercase;
 			font-weight: 200;
@@ -130,21 +110,23 @@
         		padding: 0 15px; 
     		}
     	}
-
+		p, li{
+				line-height: 28px;
+				font-size: 16px;
+		}
 		h3{
 			font-size:24px;
-			line-height:32px;
-			font-weight:400;
-			font-family: 'Libre+Baskerville', serif;
+			line-height:40px;
+			font-family: 'Bad Script', cursive;
+			text-align: center;
 		}
 		h4{
-			font-size:18px;
-			line-height: 22px;
+			font-size:16px;
+			line-height: 20px;
 			font-weight:400;
-			text-transform: uppercase;
 		}
 		//default colors
-		a,h2,label,p, ul, h5{
+		a,label,p, ul, h5{
 			color: $dark-blue;
 		}
 		a{
@@ -152,20 +134,19 @@
 				color: $dark-blue;
 			}
 		}
+		.drop-shadow {
+        	-webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, .5);
+        	box-shadow: 0 0 3px 1px rgba(0, 0, 0, .5);
+    	}
+
 		header#intro{
-			.background {	
-        		border-color: $dark-blue;
-        		span.background-wrap{
-					background-color: $light-blue; 
-				}
+			h1{
+				color: $dark-blue;
 			}
 			h3{
-				color: $brown;
-				text-align: center;
+				color: $dark-blue;
 			}
 			p{
-				line-height: 28px;
-				font-size: 16px;
 				width: 80%;
 				margin: 15px auto;
 				text-align: center;
@@ -179,26 +160,11 @@
 					padding: 0 0 0 5px;
 				}
 			}
-			
-		}
-
-		.jump-work-link{
+			.jump-work-link{
 				margin: 0 auto;
 				float: none;
 				display: block;
-		}
-
-		.intro-photo{
-			background-color:#fff;
-			height:165px;
-			margin: 0 auto;
-			width:165px;
-			border-radius: 50%;
-			border: 3px solid $light-orange;
-			background-image: url("../images/me-intro-photo.jpg");
-			background-repeat:no-repeat;
-    		background-position: center center;
-    		background-size:165px;
+			}
 		}
 
 		//default .btn style
@@ -217,16 +183,41 @@
 		}
 
 		div#work{
+			position: relative;
+			div.work-example-wrap{
+				margin-top: 80px;
+				position: relative;
+				.work-ex-inner{
+					cursor: pointer;
+					border: 3px solid $brown;
+					&:hover{
+						border: 3px solid $light-blue;
+					}
+					span.glyphicon-info-sign{
+						font-size: 16px;
+						color: $orange;
+						position: absolute;
+						top: 15px;
+						right: 25px;
+						&:hover{
+							color: $dark-blue;
+						}
+					}
+				}
+			}
 			h2{
 				color: $light-blue;
 			}
 			h3{
 				color: $light-blue;
-				text-align: center;
 			}
 			h4{
-				text-align: center;
-				color: $light-blue;
+				color: $dark-blue;
+				margin: 0;
+				padding: 10px 0 10px 15px;
+				border-bottom: 1px solid $dark-blue;
+				background-color: #fff;
+				font-weight: 500;
 			}
 			.background {	
         		border-color: $light-blue;
@@ -234,23 +225,7 @@
 					background-color: $brown; 
 				}
 			}
-			.work-example{
-				height: 200px;
-				cursor: pointer;
-				position: relative;
-				overflow: hidden;
-				border: 3px solid $light-blue;
-				background-color: #fff;
-				border-radius: 4px;
-				&:hover{
-					div.overlay{
-						height: 100%;
-						p{
-							display: block;
-						}
-					}
-				}
-				a.fill-div{
+			a.fill-div{
 					display: block;
     				height: 100%;
     				width: 100%;
@@ -260,11 +235,16 @@
     				left: 0;
     				overflow: hidden;
     				z-index: 200;
-				}
+			}
+			.work-example{
+				position: relative;
+				overflow: hidden;
+				border: 4px solid #fff;
 				div.overlay{
 					background-color: $dark-blue;
 					width: 100%;
-					transition: all 0.5s;
+					height: 0;
+					transition: height 0.3s;
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -274,15 +254,9 @@
 						color: $light-blue;
 						margin: 15px;
 						font-weight: 500;
-						font-size: 16px;
-						span.glyphicon-new-window{
-							color: $orange;
-							margin-left: 5px;
-						}
 					}
 				}
 				.work-image-container{
-					padding: 0 15px;
 					img{
 						width: 100%;
 					}
@@ -291,10 +265,6 @@
 		}
 		
 		div#about{
-			p, li{
-				line-height: 28px;
-				font-size: 16px;
-			}
 			h2{
 				color: $brown;
 			}
@@ -309,7 +279,6 @@
 			}
 			h3{
 				color: $brown;
-				text-align: center;
 			}
 			.btn{
 				background-color: $brown;
@@ -323,18 +292,26 @@
 					padding-right: 10px;
 				}
 			}
+			img.my-photo{
+	    		width:25%;
+	    		border-radius: 4px;
+	    		float: left;
+	    		margin: 2% 8% 5% 3%;
+	    		-ms-transform: rotate(-10deg); /* IE 9 */
+	    		-webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
+	    		transform: rotate(-10deg);
+    		}
 		}	
-		.drop-shadow {
-        	-webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, .5);
-        	box-shadow: 0 0 3px 1px rgba(0, 0, 0, .5);
-    	}
+
     	div#contact{
+    		h2{
+    			color: $dark-blue;
+    		}
     		h4{
     			color: $brown;
     		}
     		h3{
     			color: $dark-blue;
-    			text-align: center;
     		}
     		.form-horizontal{
     			background-color: #fff;
@@ -357,16 +334,11 @@
 					background-color: $light-orange; 
 				}
 			}
+			label.control-label{
+				font-weight: 400;
+			}
     	}
-    	img.my-photo{
-    		width:25%;
-    		border-radius: 4px;
-    		float: left;
-    		margin: 2% 8% 5% 3%;
-    		-ms-transform: rotate(-10deg); /* IE 9 */
-    		-webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
-    		transform: rotate(-10deg);
-    	}
+
 
     	.ribbon-wrapper-orange {
   			width: 85px;
@@ -396,9 +368,39 @@
   				box-shadow:         0px 0px 3px rgba(0,0,0,0.3);
 			}
 		}
-		.email-link{
-			text-align: right;
+
+		footer{
+			background-color: $brown;
+			padding: 10px 0;
+			border-top: 3px solid $orange;
+			p,a{	
+				color: $light-blue;
+				text-align: center;
+				font-size: 14px;
+				line-height: 18px
+			}
+			a{
+				&:hover{
+					text-decoration: none;
+					color: $light-orange;
+				}
+			}
+			.btn{
+				margin: 0 auto;
+				width: 105px;
+				display: block;
+				background-color: $orange;
+				&:hover{
+					background-color: $light-orange;
+					color: $brown;
+				}
+			}
+			.email-link{
+				text-align: right;
+			}
 		}
+
+
 		.text-justify {
         	text-align: center;
     	}
@@ -408,7 +410,6 @@
 
 /* anything below 767px is xs on bootstrap 3 */
 @media (max-width: 767px) {
-
 	.social-links-wrap, .email-link{
 		text-align: center;
 	}
@@ -428,15 +429,12 @@
     }
 	div#work{
 		.work-example{
-			height: 145px
+			height: 150px
 		}
 	}
-
-
 }
 
 @media (max-width: 600px) {
-
 	.background {
     	&:before {
     		border-top: none;
@@ -445,7 +443,7 @@
         	padding: 0; 
     	}
     }
-    h2{
+    h2,h1{
     	font-weight: 900;
     }
     .work-example-wrap{
@@ -454,24 +452,23 @@
 }
 
 @media (max-width: 450px) {
-
 	img.my-photo{
 		float: none;
 		width: 60%;
 		margin: 0 auto;
 		display: block;
 	}
+	h1{
+		font-size: 43px;
+	}
 	h2{
 		font-size: 38px;
 	}
 	h3{
 		font-size: 20px;
-		line-height: 24px;
+		line-height: 30px;
 	}
-	.work-example{
-		height: 250px;
-	}
-	#intro{
+	header#intro{
 		.col-xs-offset-1{
 			margin-left: 0;
 		}
@@ -481,12 +478,7 @@
 	}
 	div#work{
 		.work-example{
-			height: auto;
-		}
-	}
-	header#intro{
-		span.glyphicon-star-empty{
-			display: none;
+			height: 150px;
 		}
 	}
 	div#about{
@@ -498,15 +490,18 @@
 
 /* Small desktops / portrait tablets, 768px and up to 991px, sm on bootstrap 3 */
 @media (min-width: 768px) and (max-width: 991px) {
-
-
+	div#work{
+		.work-example{
+			height: 190px
+		}
+	}
 }
 
 /* Medium desktops / landscape tablets, 992px and up to 1199px, md on bootstrap 3 */
 @media (min-width: 992px) and (max-width: 1199px) {
 	div#work{
 		.work-example{
-			height: 150px
+			height: 170px
 		}
 	}
 }
@@ -515,7 +510,7 @@
 @media (min-width: 1200px) {
 	div#work{
 		.work-example{
-			height: 175px
+			height: 200px
 		}
 	}
 }

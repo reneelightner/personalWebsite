@@ -61,7 +61,7 @@ nav {
       background-position: -144px -36px; }
 
 .row {
-  padding: 120px 0 220px 0;
+  padding: 80px 0 220px 0;
   margin-bottom: 20px; }
 
 header#intro {
@@ -330,6 +330,12 @@ footer {
 
 /* anything below 767px is xs on bootstrap 3 */
 @media (max-width: 767px) {
+  #myCarousel .carousel-inner {
+    width: 525px;
+    margin: 0 auto; }
+    #myCarousel .carousel-inner .carousel-caption {
+      top: 270px; }
+
   .social-links-wrap, .email-link {
     text-align: center; }
 
@@ -346,12 +352,15 @@ footer {
   .text-justify {
     text-align: left; }
 
-  .row {
-    padding: 50px 0; }
-
   div#work .work-example {
     height: 150px; } }
 @media (max-width: 600px) {
+  #myCarousel .carousel-inner {
+    width: 440px;
+    margin: 0 auto; }
+    #myCarousel .carousel-inner .carousel-caption {
+      top: 230px; }
+
   .background:before {
     border-top: none; }
   .background span.background-wrap {
@@ -363,6 +372,14 @@ footer {
   .work-example-wrap {
     width: 100%; } }
 @media (max-width: 450px) {
+  #myCarousel .carousel-inner {
+    width: 300px;
+    margin: 0 auto; }
+    #myCarousel .carousel-inner .carousel-caption {
+      right: 0;
+      left: 0;
+      top: 165px; }
+
   img.my-photo {
     float: none;
     width: 60%;
@@ -391,10 +408,16 @@ footer {
     padding-top: 25px; } }
 /* Small desktops / portrait tablets, 768px and up to 991px, sm on bootstrap 3 */
 @media (min-width: 768px) and (max-width: 991px) {
+  #myCarousel .carousel-inner .carousel-caption {
+    top: 360px; }
+
   div#work .work-example {
     height: 190px; } }
 /* Medium desktops / landscape tablets, 992px and up to 1199px, md on bootstrap 3 */
 @media (min-width: 992px) and (max-width: 1199px) {
+  #myCarousel .carousel-inner .carousel-caption {
+    top: 460px; }
+
   div#work .work-example {
     height: 170px; } }
 /* Large desktops, 1200px and up, lg on bootstrap 3 */

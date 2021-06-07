@@ -317,51 +317,26 @@
 			<div class='row' id='contact'>
 				<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
 					<h2 class='background'><span class="background-wrap">Get in <span class="bold">Contact</span></span></h2>
-					<h3>Feel free to send me an email</h3>
 				</div>                                      
-    			<form class="form-horizontal top-buffer contact col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12" name='contact' >
-    				<div class="form-group"> 
-    					<label for="name" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 control-label">Name:</label>
-        				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-            				<input type="text" name="name" class="form-control"/>
-       					</div>
-       				</div>
-    				<div class="form-group">
-    					<label for="email" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 control-label">E-mail:</label>
-    					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-    						<input type="email" name="email" class="form-control" />
-    					</div>
-    				</div> 
-    				<div class="form-group">
-    					<label for="message" class="col-lg-2 col-md-2 col-sm-2 col-xs-12 control-label">Message:</label>
-    					<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
-    						<textarea name="message" class="form-control"></textarea>
-    					</div>
-    				</div>
-    			</form>  
-    			<div class='top-buffer col-lg-6 col-lg-offset-2 col-md-8 col-md-offset-1 col-sm-10 col-xs-12 success-msg'>
-    				<h4></h4>	
-    			</div> 
-    			<div class='top-buffer col-lg-2 col-md-2 col-sm-2 col-xs-12'>
-    				<input type="submit" value="Send" name="submit" id="submit" class="btn pull-right"/>
-    			</div> 
+				<div class='row'>
+					<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 social-links-wrap'>
+						<ul class='social-links list-unstyled list-inline'>
+							<li><a target='new' class="linkedin" href="https://www.linkedin.com/in/renee-lempert-3859633/"></a></li>
+						</ul>
+					</div>
+					<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12 email-link'>
+						<p><i class='glyphicon glyphicon-envelope'></i><a href="mailto:ReneeLightner@gmail.com" target="_top">ReneeLightner@gmail.com</a></p>
+					</div>
+				</div>
 			</div>
 		</div>
 		</section>
 		<footer>
 			<div class='container'>
 				<div class='row'>
-					<div class='col-lg-3 col-md-3 col-sm-5 col-xs-12 social-links-wrap'>
-						<ul class='social-links list-unstyled list-inline'>
-							<li><a target='new' class="linkedin" href="https://www.linkedin.com/in/renee-lempert-3859633/"></a></li>
-						</ul>
-					</div>
-					<div class='col-lg-6 col-md-6 col-sm-4 col-xs-12'>
+					<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
 						<p>Online portfolio designed and developed by Renee Lempert</p>
 						<a href="#" class='btn'>To the top</a>
-					</div>
-					<div class='col-lg-3 col-md-3 col-sm-3 col-xs-12 email-link'>
-						<p><i class='glyphicon glyphicon-envelope'></i><a href="mailto:ReneeLightner@gmail.com" target="_top">ReneeLightner@gmail.com</a></p>
 					</div>
 				</div>
 			</div>
@@ -425,95 +400,39 @@
     				$("nav a.work-link").click();
     			});
 
-    			$("input#submit").click(function(){
 
-    				var contactname=document.contact.name.value,
- 					email=document.contact.email.value,
- 					message=document.contact.message.value;
+			  // Activate Carousel
+			  $("#myCarousel").carousel();
 
- 					if(validation(contactname, email, message)){
- 						$.ajax({
-			            	type: "POST",
-			            	url: "process.php", //process to mail
-			            	data: $('form.contact').serialize(),
-			            	success: function(){
-			                	$("div.success-msg h4").html("Thank you for the email!"); 
-			            	}
-			        	});
- 					}
-
-    			});
-
-    			function validation(contactname, email, message){
-
-					var name_exp=/^[A-Za-z\s]+$/;
-					if(contactname=='')
-					{
-						alert("Please enter your name!");
-						document.enq.name.focus();
-						return false;
-					}
-					else if(!contactname.match(name_exp))
-					{
-						alert("Invalid Name field!");
-						document.enq.name.focus();
-						return false;
-					}
-					
-					var email_exp=/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-					if(email=='')
-					{
-						alert("Please Enter an email address!");
-						document.enq.email.focus();
-						return false;
-					}
-					else if(!email.match(email_exp))
-					{
-						alert("Invalid Email address!");
-						document.enq.email.focus();
-						return false;
-					}
-					
-					if(message=='')
-					{
-						alert("Please enter a message!");
-						document.enq.message.focus();
-						return false;
-					}
-
-					return true;
-				}
-
-
-				  // Activate Carousel
-				  $("#myCarousel").carousel();
-
-				  //pause carousel
-				  $("#myCarousel").carousel('pause');
-				    
-				  // Enable Carousel Indicators
-				  $(".item1").click(function(){
-				    $("#myCarousel").carousel(0);
-				  });
-				  $(".item2").click(function(){
-				    $("#myCarousel").carousel(1);
-				  });
-				  $(".item3").click(function(){
-				    $("#myCarousel").carousel(2);
-				  });
-				  $(".item4").click(function(){
-				    $("#myCarousel").carousel(3);
-				  });
-				    
-				  // Enable Carousel Controls
-				  $(".left").click(function(event){
-				    $("#myCarousel").carousel("prev");
-				    event.preventDefault();
-				  });
-				  $(".right").click(function(event){
-				    $("#myCarousel").carousel("next");
-				    event.preventDefault();
-				  });
+			  //pause carousel
+			  $("#myCarousel").carousel('pause');
+			    
+			  // Enable Carousel Indicators
+			  $(".item2").click(function(){
+			    $("#myCarousel").carousel(0);
+			  });
+			  $(".item3").click(function(){
+			    $("#myCarousel").carousel(1);
+			  });
+			  $(".item4").click(function(){
+			    $("#myCarousel").carousel(2);
+			  });
+			  $(".item5").click(function(){
+			    $("#myCarousel").carousel(3);
+			  });
+			  $(".item6").click(function(){
+			    $("#myCarousel").carousel(4);
+			  });
+			    
+			  // Enable Carousel Controls
+			  $(".left").click(function(event){
+			    $("#myCarousel").carousel("prev");
+			    event.preventDefault();
+			  });
+			  $(".right").click(function(event){
+			    $("#myCarousel").carousel("next");
+			    event.preventDefault();
+			  });
 
     			
     		});

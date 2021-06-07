@@ -61,8 +61,7 @@ nav {
       background-position: -144px -36px; }
 
 .row {
-  padding: 80px 0 100px 0;
-  margin-bottom: 20px; }
+  padding: 80px 0 60px 0; }
 
 header#intro {
   padding: 120px 0 60px 0;
@@ -143,7 +142,7 @@ header#intro .btn {
   header#intro .btn span.glyphicon {
     padding: 0 0 0 5px; }
 header#intro .jump-work-link {
-  margin: 0 auto;
+  margin: 35px auto;
   float: none;
   display: block; }
 
@@ -254,6 +253,11 @@ div#about img.my-photo {
   /* Chrome, Safari, Opera */
   transform: rotate(-10deg); }
 
+div#contact .social-links-wrap {
+  margin-top: 30px;
+  text-align: center; }
+div#contact .email-link {
+  text-align: center; }
 div#contact h2 {
   color: #0075B2; }
 div#contact h4 {
@@ -325,8 +329,6 @@ footer {
     footer .btn:hover {
       background-color: #FFC377;
       color: #B26550; }
-  footer .email-link {
-    text-align: right; }
 
 .text-justify {
   text-align: center; }
@@ -338,12 +340,6 @@ footer {
     margin: 0 auto; }
     #myCarousel .carousel-inner .carousel-caption {
       top: 270px; }
-
-  .social-links-wrap, .email-link {
-    text-align: center; }
-
-  .email-link {
-    margin-top: 15px; }
 
   img.my-photo {
     -ms-transform: rotate(0deg);

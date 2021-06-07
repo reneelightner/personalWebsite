@@ -7,7 +7,6 @@ body {
   #myCarousel .carousel-indicators {
     bottom: -50px; }
   #myCarousel .carousel-inner {
-    width: 525px;
     overflow: visible; }
     #myCarousel .carousel-inner .carousel-caption {
       padding: 0;

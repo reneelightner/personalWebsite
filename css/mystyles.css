@@ -7,6 +7,7 @@ body {
   #myCarousel .carousel-indicators {
     bottom: -50px; }
   #myCarousel .carousel-inner {
+    width: 525px;
     overflow: visible; }
     #myCarousel .carousel-inner .carousel-caption {
       padding: 0;
@@ -61,7 +62,7 @@ nav {
       background-position: -144px -36px; }
 
 .row {
-  padding: 80px 0 220px 0;
+  padding: 80px 0 100px 0;
   margin-bottom: 20px; }
 
 header#intro {
@@ -158,6 +159,9 @@ header#intro .jump-work-link {
 
 .glyphicon {
   margin-right: 4px; }
+
+div.ux-section {
+  padding-top: 80px; }
 
 div#work {
   position: relative; }

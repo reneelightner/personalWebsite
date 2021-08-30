@@ -29,13 +29,13 @@
 		}
 
 		nav{
-			background-color: $dark-blue;
+			background-color: $brown;
 			&.navbar{
 				border-bottom: 3px solid $light-orange;
 				.navbar-toggle{
 					background-color: $light-blue;
 					.icon-bar{
-						background-color: $dark-blue;
+						background-color: $brown;
 					}
 				}			
 				li{
@@ -43,7 +43,7 @@
 						color: $light-blue;
 						font-weight:600;
 						text-transform: uppercase;
-						background-color: $dark-blue;
+						background-color: $brown;
 						&:hover{
 							color: $light-orange;
 							background-color: $dark-blue;
@@ -98,7 +98,7 @@
 			background-color: $light-blue;
 		}
 		section:nth-child(3){
-			background-color: $brown;
+			background-color: $dark-blue;
 		}
 		section:nth-child(5){
 			background-color: $light-orange;
@@ -244,7 +244,7 @@
 			.background {	
         		border-color: $light-blue;
         		span.background-wrap{
-					background-color: $brown; 
+					background-color: $dark-blue; 
 				}
 			}
 			a.fill-div{

@@ -15,18 +15,18 @@ body {
       color: #fff; }
 
 nav {
-  background-color: #0075B2; }
+  background-color: #B26550; }
   nav.navbar {
     border-bottom: 3px solid #FFC377; }
     nav.navbar .navbar-toggle {
       background-color: #E2F5FF; }
       nav.navbar .navbar-toggle .icon-bar {
-        background-color: #0075B2; }
+        background-color: #B26550; }
     nav.navbar li a.page-scroll {
       color: #E2F5FF;
       font-weight: 600;
       text-transform: uppercase;
-      background-color: #0075B2; }
+      background-color: #B26550; }
       nav.navbar li a.page-scroll:hover {
         color: #FFC377;
         background-color: #0075B2; }
@@ -71,7 +71,7 @@ section:nth-child(even) {
   background-color: #E2F5FF; }
 
 section:nth-child(3) {
-  background-color: #B26550; }
+  background-color: #0075B2; }
 
 section:nth-child(5) {
   background-color: #FFC377; }
@@ -193,7 +193,7 @@ div#work {
   div#work .background {
     border-color: #E2F5FF; }
     div#work .background span.background-wrap {
-      background-color: #B26550; }
+      background-color: #0075B2; }
   div#work a.fill-div {
     display: block;
     height: 100%;

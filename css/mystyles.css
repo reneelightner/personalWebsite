@@ -29,10 +29,10 @@ nav {
       background-color: #B26550; }
       nav.navbar li a.page-scroll:hover {
         color: #FFC377;
-        background-color: #0075B2; }
+        background-color: #B26550; }
       nav.navbar li a.page-scroll.active {
         color: #FFC377;
-        background-color: #0075B2; }
+        background-color: #B26550; }
 
 .social-links a {
   display: block;

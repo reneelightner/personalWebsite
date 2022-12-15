@@ -278,6 +278,10 @@
 			    $("#myCarousel").carousel("next");
 			    event.preventDefault();
 			  });
+				
+			  if (!document.title && typeof document.getElementsByTagName('title')[0] === 'object') {
+    				document.title = document.getElementsByTagName('title')[0].innerHTML;
+			  }
 
     			
     		});

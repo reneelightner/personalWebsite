@@ -165,8 +165,11 @@ div.ux-section {
 
 div#work {
   position: relative; }
-  div#work div.work-example-wrap {
+  div#work div.section-header {
     margin-top: 80px;
+  }
+  div#work div.work-example-wrap {
+    margin-top: 20px;
     position: relative; }
     div#work div.work-example-wrap .work-ex-inner {
       cursor: pointer;
@@ -203,6 +206,12 @@ div#work {
     overflow: hidden;
     border: 4px solid #fff; }
     div#work .work-example .work-image-container img {
+      width: 100%; }
+  div#work .work-example-tall {
+    position: relative;
+    overflow: hidden;
+    border: 4px solid #fff; }
+    div#work .work-example-tall .work-image-container img {
       width: 100%; }
 
 div#contact .social-links-wrap {
@@ -366,6 +375,9 @@ footer {
 /* Large desktops, 1200px and up, lg on bootstrap 3 */
 @media (min-width: 1200px) {
   div#work .work-example {
-    height: 200px; } }
+    height: 200px; } 
+  div#work .work-example-tall {
+    height: 250px; } 
+  }
 
 /*# sourceMappingURL=mystyles.css.map */
